@@ -1,0 +1,2 @@
+rootProject.name = 'dependency-lock-demo'
+include 'core', 'service-a', 'service-b'

@@ -1,0 +1,6 @@
+dependencies {
+    customLib(platform('org.springframework.boot:spring-boot-dependencies:2.7.8'))
+    customLib('org.apache.commons:commons-lang3:3.12.0')
+    customLib('com.google.guava:guava:31.1-jre')
+    customLib(project(':core'))
+}

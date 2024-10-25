@@ -1,0 +1,35 @@
+
+allprojects {
+    apply plugin: 'java-library'
+
+    repositories {
+        mavenCentral()
+    }
+
+    configurations {
+        customLib {
+            canBeResolved = true
+            canBeConsumed = true
+        }
+        implementation.extendsFrom(customLib)
+    }
+
+    dependencyLocking {
+        lockAllConfigurations()
+        lockFile.set(new File(rootProject.projectDir, "${name}.lockfile"))
+    }
+
+}
+
+tasks.register('resolveAndLockAll') {
+    notCompatibleWithConfigurationCache("Filters configurations at execution time")
+    doLast {
+      subprojects.each { project ->
+        project.configurations.findAll {
+          it.canBeResolved && it.name == "customLib"
+        }.each {
+          it.resolve()
+        }
+      }
+    }
+}

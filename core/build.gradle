@@ -1,0 +1,5 @@
+dependencies {
+    customLib(platform('org.springframework.boot:spring-boot-dependencies:2.7.8'))
+    customLib('org.slf4j:slf4j-api') { version { strictly '1.7.36' } }
+    customLib('com.fasterxml.jackson.core:jackson-databind')
+}
