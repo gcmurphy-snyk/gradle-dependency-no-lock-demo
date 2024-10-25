@@ -1,0 +1,11 @@
+com.fasterxml.jackson.core:jackson-annotations:2.13.4=customLib
+com.fasterxml.jackson.core:jackson-core:2.13.4=customLib
+com.fasterxml.jackson.core:jackson-databind:2.13.4.2=customLib
+com.fasterxml.jackson:jackson-bom:2.13.4=customLib
+commons-codec:commons-codec:1.15=customLib
+org.apache.httpcomponents:httpclient:4.5.14=customLib
+org.apache.httpcomponents:httpcore:4.4.16=customLib
+org.slf4j:slf4j-api:1.7.36=customLib
+org.springframework.boot:spring-boot-dependencies:2.7.8=customLib
+org.yaml:snakeyaml:2.3=customLib
+empty=
